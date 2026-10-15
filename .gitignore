@@ -1,0 +1,29 @@
+# Environment variables & secrets
+.env
+
+# Paper drafts & LaTeX source (managed separately by author)
+paper/
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Logs & temp files
+*.log
+*.tmp
+*.swp
+*~
+

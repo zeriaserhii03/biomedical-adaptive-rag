@@ -1,0 +1,17 @@
+\begin{table}
+\caption{Ablation Results for BioASQ QA}
+\label{tab:ablation_results}
+\begin{tabular}{lrrrrrrrrrrrr}
+\toprule
+Config Name & map_at_10_doc & map_at_10_node & snippet_f1 & answer_f1_rouge & entity_coverage & attribute_coverage & relation_fidelity & unsupported_entity_rate & n_unsupported_entities & context_tokens & algorithmic_latency_ms & latency_ms \\
+\midrule
+C0: Gold Context (Ceiling) & 1.000000 & 0.991000 & 0.457300 & 0.686000 & 1.000000 & 1.000000 & 0.660000 & 0.106800 & 16.175000 & 458.825000 & 0.500000 & 6440.200000 \\
+C1: Flat RAG (MedCPT) & 0.618600 & 0.978800 & 0.327300 & 0.575200 & 0.505300 & 0.519700 & 0.150000 & 0.109700 & 4.700000 & 132.900000 & 89.440000 & 581.925000 \\
+C2: Standard RAPTOR & 0.638700 & 0.978800 & 0.259100 & 0.619400 & 0.505400 & 0.516100 & 0.145000 & 0.200200 & 12.175000 & 186.825000 & 62.560000 & 527.665000 \\
+C3: RAPTOR + EP & 0.670600 & 0.973800 & 0.242600 & 0.606200 & 0.564000 & 0.520600 & 0.115000 & 0.204200 & 12.325000 & 262.225000 & 63.090000 & 646.385000 \\
+C4: RAPTOR + Adaptive Router & 0.770500 & 1.000000 & 0.344400 & 0.620900 & 0.544000 & 0.577700 & 0.190000 & 0.163200 & 11.125000 & 142.725000 & 86.530000 & 500.655000 \\
+C5: Static Type Router & 0.720500 & 0.980000 & 0.339800 & 0.489400 & 0.544800 & 0.591300 & 0.230000 & 0.152700 & 10.475000 & 157.675000 & 76.520000 & 604.430000 \\
+C6: Combined (EP + Router) & 0.770500 & 1.000000 & 0.344400 & 0.651000 & 0.640600 & 0.605600 & 0.260000 & 0.121100 & 8.800000 & 242.350000 & 92.320000 & 1015.060000 \\
+\bottomrule
+\end{tabular}
+\end{table}
